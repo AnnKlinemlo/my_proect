@@ -5,13 +5,14 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
 from kivy.core.window import Window
 from kivy.uix.textinput import TextInput
-import buildozer
+
+from kivymd.app import MDApp
 import ctypes
 import numpy as np
 
 Window.clearcolor = (230 / 250, 230 / 250, 250 / 250, 1)
 
-class MainApp(App):
+class MainApp(MDApp):
     def build(self):
         # здесь я добавляю основной и второй экраны в менеджер, этот класс больше ничего не делает
         sm.add_widget(MainScreen())
